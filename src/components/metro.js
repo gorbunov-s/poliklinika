@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 class Metro extends Component {
 	render() {
-				//console.log('from metro ',this.props.info)
+
 		return (
 		<Fragment>
 			<p>На метро:</p>

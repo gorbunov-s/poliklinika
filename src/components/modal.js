@@ -13,8 +13,7 @@ class Modal extends Component {
 			showModal: false,
 		});
 	}
-	
-	
+
 	render() {
 		console.log('from Modal ',this.state.showModal)
 		return (

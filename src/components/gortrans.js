@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 class Gortrans extends Component {
 	render() {
-				//console.log('from gortrans ',this.props.info)
+
 		return (
 		<Fragment>
 			<p>На городском транспорте:</p>

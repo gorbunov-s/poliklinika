@@ -27,11 +27,8 @@ class App extends Component {
 			})
 		})
 	}
-	
 
-	
   render() {
-		console.log('from App showModal', this.state.showModal )
 
 		return (
 			<Fragment>
@@ -40,17 +37,13 @@ class App extends Component {
 				<div style={{width: 600, margin: 'auto'}} key={id}>
 					<div style={{border: 'thin solid #ddd', padding: 10 }}>
 						<BriefInfo 
-
 							info={item.poliData}
 						/>
-
 					</div>
-
 						<Modal 
 							info={item}
 							onChangeState={this.state.showModal}
 						/>
-
 				</div>)
 			})}
 				

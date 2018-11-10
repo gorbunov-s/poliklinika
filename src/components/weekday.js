@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 class WeekDay extends Component {
 	render() {
-		//console.log('from WD',this.props.info.days);
+
 		return (
 		<Fragment>
 			<p>{this.props.info.days.map((item, id) => {
