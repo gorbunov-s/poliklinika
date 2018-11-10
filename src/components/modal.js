@@ -6,19 +6,14 @@ import BriefInfo from './briefinfo';
 
 class Modal extends Component {
 	state = {
-		showModal: true,
-	}
-	hideModal = () => {
-		this.setState({
-			showModal: false,
-		});
+		active: false,
 	}
 
 	render() {
-		console.log('from Modal ',this.state.showModal)
+
 		return (
 		<Fragment>
-		{this.state.showModal &&
+		{this.state.active &&
 			<div style={{background: '#eee', padding: 20}}>
 				<span style={{float: 'right', width: 10, margin: '0 20px', cursor: 'pointer'}} onClick={this.hideModal}>X</span>
 			  <BriefInfo info={this.props.info.poliData} onShowDetail={this.hideModal} />
