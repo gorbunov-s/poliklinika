@@ -8,6 +8,7 @@ class App extends Component {
 	state = {
 		pageData: [],
 		showModal: false,
+		currentItem: null,
 		}
 	
 	componentDidMount () {
@@ -28,6 +29,12 @@ class App extends Component {
 		})
 	}
 
+	setCurrentItem(item) {
+		this.setState({
+			currentItem: {item},
+		})
+	} 
+	
   render() {
 
 		return (
@@ -38,18 +45,17 @@ class App extends Component {
 					<div style={{border: 'thin solid #ddd', padding: 10 }}>
 						<BriefInfo 
 							info={item.poliData}
-
+							onClickDetail={(item) => this.setCurrentItem(item)}
 						/>
-					</div>
-					<div>
+				</div>
+				</div>)
+			})}
+				<div>
 						<Modal 
 							info={item}
 
 						/>
 					</div>
-				</div>)
-			})}
-				
 			</Fragment>
     );
   }

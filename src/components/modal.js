@@ -14,13 +14,19 @@ class Modal extends Component {
 	
 	// componentDidMount() {
 		// this.setState ({
-			// active: true,
+			// active: false,
 		// });
 	// }
 	
 	showModal () {
 		this.setState ({
 			active: true,
+		});
+	}
+	
+	hideModal () {
+		this.setState ({
+			active: false,
 		});
 	}
 		
@@ -31,7 +37,7 @@ class Modal extends Component {
 		{this.state.active &&
 			<div style={{background: '#eee', padding: 20}}>
 				<span style={{float: 'right', width: 10, margin: '0 20px', cursor: 'pointer'}} onClick={this.hideModal}>X</span>
-			  <BriefInfo info={this.props.info.poliData} onClickDetail={() => this.showModal} />
+			  <BriefInfo info={this.props.info.poliData} onClickDetail={this.showModal}/>12345
 				<Transport info={this.props.info.transportData} />
 				<Rating info={this.props.info.rating} />
 				<Worktime info={this.props.info.openingHours} />

@@ -18,7 +18,7 @@ class BriefInfo extends Component {
 				<p><b>Адрес:</b> {this.props.info.adres}</p>
 				<p><b>Описание:</b> {this.props.info.descr}</p>
 				{this.state.showMore &&
-				<p onClick={this.props.onClickDetail} style={{color: 'blue', cursor: 'pointer'}}>Подробнее...</p>
+				<p onClick={this.props.onClickDetail(this.props.info)} style={{color: 'blue', cursor: 'pointer'}}>Подробнее...</p>
 				}
 			</div>
 		)
