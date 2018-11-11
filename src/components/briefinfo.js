@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
 class BriefInfo extends Component {
-	state = {
-		showDetail: true,
+	constructor(props) {
+		super(props);
+		this.state = {
+			showMore: true,
+		}
 	}
+
 
 	render() {
 		//console.log('from BriefInfo', this.state.showDetail);
@@ -13,8 +17,9 @@ class BriefInfo extends Component {
 				{this.props.info.gtitle} "{this.props.info.title}"</p>
 				<p><b>Адрес:</b> {this.props.info.adres}</p>
 				<p><b>Описание:</b> {this.props.info.descr}</p>
-				<p onClick={this.clickDetail} style={{color: 'blue', cursor: 'pointer'}}>Подробнее...</p>
-
+				{this.state.showMore &&
+				<p onClick={this.props.onClickDetail} style={{color: 'blue', cursor: 'pointer'}}>Подробнее...</p>
+				}
 			</div>
 		)
 	}

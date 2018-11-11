@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 
 class Rating extends Component {
 	render() {
-		console.log('from rating ',this.props.info)
 		return (
 			<Fragment>
 			<strong>Рейтинг</strong>

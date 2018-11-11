@@ -38,12 +38,15 @@ class App extends Component {
 					<div style={{border: 'thin solid #ddd', padding: 10 }}>
 						<BriefInfo 
 							info={item.poliData}
+
 						/>
 					</div>
+					<div>
 						<Modal 
 							info={item}
-							onChangeState={this.state.showModal}
+
 						/>
+					</div>
 				</div>)
 			})}
 				
