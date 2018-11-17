@@ -113,7 +113,7 @@ export default [
         ]
   },
 	{
-        "uid": "d8133d1a-154d-46de-b832-894e1c71c791",
+        "uid": "d8133d1a-154d-46de-b832-894e1c71c792",
         "hospitalType": {
             "uid": "aa574124-113a-41d9-bc04-ea65fdc37558",
             "title": "Медицинский центр"
@@ -226,7 +226,7 @@ export default [
         ]
   },
 	{
-        "uid": "d8133d1a-154d-46de-b832-894e1c71c791",
+        "uid": "d8133d1a-154d-46de-b832-894e1c71c793",
         "hospitalType": {
             "uid": "aa574124-113a-41d9-bc04-ea65fdc37558",
             "title": "Стоматологическая поликлиника"

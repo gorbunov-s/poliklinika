@@ -2,47 +2,29 @@ import React, { Component, Fragment } from 'react';
 import Transport from './transport';
 import Rating from './rating';
 import Worktime from './worktime';
-import BriefInfo from './briefinfo';
+
 
 class Modal extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-		active: false,
-		}
-	}
-	
-	// componentDidMount() {
-		// this.setState ({
-			// active: false,
-		// });
-	// }
-	
-	showModal () {
-		this.setState ({
-			active: true,
-		});
-	}
-	
-	hideModal () {
-		this.setState ({
-			active: false,
-		});
+
+
+	hideModal = () => {
+		this.props.onClickClose();
 	}
 		
 	render() {
-		console.log(this.state.active);
+		const information = this.props.info
 		return (
 		<Fragment>
-		{this.state.active &&
-			<div style={{background: '#eee', padding: 20}}>
+			<div style={{background: '#eee', padding: 20, position: 'absolute', top: 0}}>
 				<span style={{float: 'right', width: 10, margin: '0 20px', cursor: 'pointer'}} onClick={this.hideModal}>X</span>
-			  <BriefInfo info={this.props.info.poliData} onClickDetail={this.showModal}/>12345
-				<Transport info={this.props.info.transportData} />
-				<Rating info={this.props.info.rating} />
-				<Worktime info={this.props.info.openingHours} />
+			  <p style={{textAlign: 'center', fontWeight: 'bold'}}>
+				{information.hospitalType.title} "{this.props.info.title}"</p>
+				<p><b>Адрес:</b> {information.address}</p>
+				<p><b>Описание:</b> {information.description}</p>
+				<Transport info={information} />
+				<Rating info={information.rating} />
+				<Worktime info={information.openingHours} />
 			</div>
-		}
 		</Fragment>		
 		)
 	}
